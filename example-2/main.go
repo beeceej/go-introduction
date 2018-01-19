@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/beeceej/li-go-prez/example-2/coolpackage"
+	"github.com/beeceej/go-introduction/example-2/coolpackage"
 )
 
 func main() {
