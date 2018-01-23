@@ -26,8 +26,7 @@ func main() {
 		fmt.Printf("Recieved: %v | after %v \n ", theBytes, time.Now().Sub(start))
 	}
 
-	end := time.Now()
-	fmt.Println("total time taken ", end.Sub(start))
+	fmt.Println("total time taken ", time.Now().Sub(start))
 }
 
 // Go to the `network` N times (items), and queue that work up by writing to a channel

@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-
 type Adder interface {
 	Add() interface{}
 }
@@ -27,19 +26,20 @@ func (a *AddStringStruct) Add() interface{} {
 
 func main() {
 
-	adderIntOne()
-	adderIntTwo()
-
-	adderStringOne()
-	adderStringTwo()
+	intAdder()
+	stringAdder()
 
 	adders := make([]Adder, 2, 2)
 
-	adders[0] = &AddIntStruct{}
-	adders[1] = &AddStringStruct{}
+	adders[0] = &AddIntStruct{A: 1, B: 100}
+	adders[1] = &AddStringStruct{A: "a", B: "b"}
+
+	for _, v := range adders {
+		fmt.Println(v.Add())
+	}
 }
 
-func adderIntOne() {
+func intAdder() {
 	// Create a new reference to the AddStruct and assign the pointer to adder
 	adder := new(AddIntStruct)
 
@@ -49,32 +49,12 @@ func adderIntOne() {
 	fmt.Println(adder.Add())
 }
 
-func adderIntTwo() {
-	// Or create reference and assign values to the struct
-	adder := &AddIntStruct{
-		A: 1,
-		B: 2,
-	}
-
-	fmt.Println(adder.Add())
-}
-
-func adderStringOne() {
+func stringAdder() {
 	// Create a new reference to the AddStruct and assign the pointer to adder
 	adder := new(AddStringStruct)
 
 	adder.A = "Hello! "
 	adder.B = "World! "
-
-	fmt.Println(adder.Add())
-}
-
-func adderStringTwo() {
-	// Or create reference and assign values to the struct
-	adder := &AddStringStruct{
-		A: "Hello! ",
-		B: "World! ",
-	}
 
 	fmt.Println(adder.Add())
 }
