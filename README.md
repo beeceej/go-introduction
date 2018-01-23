@@ -6,5 +6,6 @@
 ## [ Example 4 | Concurrency! ](./example-4/main.go)
 ## [ Example 5 | Serialization! ](./example-5/main.go)
 ## [ Example 6 | Servers! ](./example-6/main.go)
-## [ Example 7 | A CLI! ](./example-7/main.go)
+## [ Example 7 | A CLI! (redacted)](./README.md)
+## [ Example 8 | Docker! ](./example-7/main.go)
 

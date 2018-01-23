@@ -16,6 +16,6 @@
 8: 
 		cd example-8 && \
 			docker build -t example-8 . && \
-			docker run -it -d -p 8080:8080 example-8 && \
+			docker run -itdp 8080:8080 example-8 && \
 			curl -X GET localhost:8080/products && \
-			docker images example-8
+			docker history example-8
