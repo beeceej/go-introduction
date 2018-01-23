@@ -1,12 +1,13 @@
-FROM golang:latest as build-env
-LABEL maintainer=beeceej
-WORKDIR /
-ADD ./main.go /main.go
-RUN export CGO_ENABLED=0 && go build -o example-8 main.go
+FROM golang:alpine as build-env
 
-FROM alpine
-WORKDIR /app
-COPY --from=build-env example-8 .
-RUN ls  -la
-CMD ./example-8
+LABEL maintainer=beeceej
+WORKDIR /go/src/app
+ADD ./main.go main.go
+RUN CGO_ENABLED=0 go-wrapper install -ldflags '-extldflags "-static"'
+RUN ls -la
+
+FROM scratch
+WORKDIR /go/bin/app
+COPY --from=build-env /go/bin/app /app
+CMD [ "/app" ]
 EXPOSE 8080
