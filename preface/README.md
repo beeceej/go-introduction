@@ -48,5 +48,6 @@ Go is an open source language developed by some old and geeky unix guys at googl
     * ### [Etcd](https://github.com/coreos/etcd)
     * ### [SoundCloud](https://developers.soundcloud.com/blog/go-at-soundcloud) *outdated link*
     * ### [CloudFlare](https://github.com/cloudflare)
+    * ### [CoreOS](https://github.com/coreos)
     * ### and more....
 
