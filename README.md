@@ -1,5 +1,6 @@
 # Golang
 
+## [Preface](./preface/README.md)
 ## [ Example 1 | Language Basics! ](./example-1/main.go)
 ## [ Example 2 | Packages and visibility! ](./example-2/main.go)
 ## [ Example 3 | interfaces! ](./example-3/main.go)
