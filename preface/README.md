@@ -51,3 +51,8 @@ Go is an open source language developed by some old and geeky unix guys at googl
     * ### [CoreOS](https://github.com/coreos)
     * ### and more....
 
+
+
+# Anthropomorphic Language Mascot
+
+![golang gopher](./gopher.png)
